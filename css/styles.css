@@ -22,7 +22,7 @@ body {
 
 /* Text */
 
-p {
+p, li {
     margin: 10px 0;
     line-height: 1.5rem;
     font-size: 1.5rem;
@@ -84,10 +84,19 @@ section .container {
 }
 
 section .container > div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1fr;
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+section .container > div div {
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+section .container ul {
+    list-style-position: inside;
+    text-align: left;
 }
 
 /* Button */
