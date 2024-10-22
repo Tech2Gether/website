@@ -91,7 +91,6 @@ section .container > div {
 section .container > div div {
     padding: 20px;
     margin: 10px;
-    border: 1px solid black;
 }
 
 section .container ul {
