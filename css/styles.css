@@ -67,6 +67,18 @@ img {
     min-width: 250px;
 }
 
+.tier h2 {
+    text-align: center;
+}
+
+.tier li {
+    text-align: left;
+}
+                        
+.tier ul {
+    padding-left: 10em
+}
+
 /* Footer */
 footer {
     position: absolute;
