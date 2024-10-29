@@ -5,8 +5,8 @@
 }
 
 * {
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
 }
 
 /* Body */
@@ -20,9 +20,29 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Cards */
+
+.card {
+    background-color: white;
+}
+
+.card-body {
+    background-color: var(--accent);
+    border-radius: 5px;
+}
+
+.card-text {
+    width: 400px;
+}
+
+.sponsor-card {
+    width: 100%;
+}
+
 /* Text */
 
-p, li {
+p,
+li {
     margin: 10px 0;
     line-height: 1.5rem;
     font-size: 1.5rem;
@@ -42,29 +62,29 @@ header {
     height: 200px;
     clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
     -moz-user-select: none;
-	-webkit-user-select: none;
-	user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 header img {
     position: absolute;
     z-index: 10;
     top: -35px;
-    width: 350px
+    width: 350px;
 }
 
 footer {
     position: absolute;
     background-color: var(--accent);
     width: 100%;
-    padding: 25px 0px 25px 0px;
+    padding: 25px 0;
     text-align: center;
     letter-spacing: 1.5px;
     font-size: 1.5rem;
     margin-top: 5px;
-    -moz-user-select: none;
-	-webkit-user-select: none;
-	user-select: none;
+    /* -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none; */
 }
 
 /* Section */
@@ -72,8 +92,9 @@ footer {
 section {
     display: flex;
     height: 70%;
-    width: 80%;
+    width: 60%;
     margin: auto;
+    min-width: 700px;
 }
 
 section .container {
@@ -87,12 +108,13 @@ section .container {
     width: 100%;
 }
 
-section .container > div {
+section .container>div {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-section .container > div div {
+section .container>div div {
     padding: 20px;
     margin: 10px;
 }
@@ -118,8 +140,8 @@ section .container ul {
     text-align: center;
     text-decoration: none;
     -moz-user-select: none;
-	-webkit-user-select: none;
-	user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .btn:hover {
@@ -130,8 +152,31 @@ section .container ul {
 
 /* Breakpoints */
 
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
     footer {
         display: none;
+    }
+} */
+
+@media screen and (max-width: 980px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+        min-width: 700px;
+    }
+
+    section .container>div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .card-text {
+        width: 200px;
     }
 }
