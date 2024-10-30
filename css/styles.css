@@ -136,7 +136,7 @@ section .container ul {
     font-size: 24px;
     display: inline-block;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s;
     text-align: center;
     text-decoration: none;
     -moz-user-select: none;
@@ -148,6 +148,7 @@ section .container ul {
     background-color: var(--secondary);
     border-color: var(--accent);
     color: var(--accent);
+    transition: 0.3s;
 }
 
 /* Breakpoints */
