@@ -153,12 +153,6 @@ section .container ul {
 
 /* Breakpoints */
 
-/* @media screen and (max-width: 992px) {
-    footer {
-        display: none;
-    }
-} */
-
 @media screen and (max-width: 980px) {
     section {
         flex-direction: column;
