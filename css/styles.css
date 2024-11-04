@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 :root {
     --primary: #00427D;
     --secondary: #36465F;
@@ -24,6 +26,8 @@ body {
 
 .card {
     background-color: white;
+    width: 75%;
+    margin: 0;
 }
 
 .card-body {
@@ -32,7 +36,8 @@ body {
 }
 
 .card-text {
-    width: 400px;
+    width: 75%;
+    margin: auto;
 }
 
 .sponsor-card {
@@ -41,8 +46,7 @@ body {
 
 /* Text */
 
-p,
-li {
+p, li {
     margin: 10px 0;
     line-height: 1.5rem;
     font-size: 1.5rem;
@@ -82,9 +86,6 @@ footer {
     letter-spacing: 1.5px;
     font-size: 1.5rem;
     margin-top: 5px;
-    /* -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none; */
 }
 
 /* Section */
@@ -92,9 +93,8 @@ footer {
 section {
     display: flex;
     height: 70%;
-    width: 60%;
+    width: 75%;
     margin: auto;
-    min-width: 700px;
 }
 
 section .container {
@@ -105,7 +105,6 @@ section .container {
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     margin: auto;
-    width: 100%;
 }
 
 section .container>div {
@@ -157,7 +156,7 @@ section .container ul {
     section {
         flex-direction: column;
         align-items: center;
-        min-width: 700px;
+        width: 100%;
     }
 
     section .container>div {
@@ -172,6 +171,16 @@ section .container ul {
     }
 
     .card-text {
-        width: 200px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .card {
+        width: 100%;
+    }
+
+    * {
+        font-size: 0.8em;
     }
 }
