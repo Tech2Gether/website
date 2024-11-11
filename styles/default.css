@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Digital Dare";
+    src: url("../font/digital-dare.ttf") format("truetype");
+}
+
+:root {
+    --binary-blue: #00427D;
+    --analog-aquamarine: #0E9ED5;
+    --yaml-yellow: #FFC90D;
+}
+
+/* 
+    Main
+*/
+
+body {
+    background-image: url("../img/background.png");
+    background-repeat: repeat;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    margin: 0;
+}
+
+main {
+    background-color: #00427de6;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    padding: 1em;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 
+    Header & Footer
+*/
+
+header {
+    width: 100%;
+    height: 200px;
+    background-color: var(--binary-blue);
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--binary-blue);
+    color: white;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+header img {
+    position: absolute;
+    top: -35px;
+    width: 350px;
+}
+
+
+/* 
+    Text
+*/
+
+.dare {
+    font-family: "Digital Dare";
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--analog-aquamarine);
+    text-shadow: -2px 0 2px magenta;
+    letter-spacing: 6px;
+}
+
+p {
+    margin: 0;
+}
+
+/* 
+    Classes
+*/
+
+.card {
+    background-color: var(--binary-blue);
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 #00000033;
+    transition: 0.2s;
+    border-radius: 15px;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin-top: 3em;
+}
+
+.card p {
+    font-size: 1.5em;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 #00000033;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--yaml-yellow);
+    color: black;
+    border: 2px solid white;
+    padding: 1em;
+    border-radius: 15px;
+    text-decoration: none;
+    margin: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--yaml-yellow);
+    border-color: var(--yaml-yellow);
+    transition: 0.5s;
+    transform: scale(1.1);
+}
