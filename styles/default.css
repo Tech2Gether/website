@@ -152,9 +152,23 @@ footer p {
     transform: scale(1.1);
 }
 
+.countdown-timer {
+    pointer-events: none;
+}
+
+.timer-title {
+    margin-bottom: -2em;
+}
+
 /* 
     Breakpoints
 */
+
+@media screen and (max-width: 1200px) {
+    .timer-title {
+        margin-bottom: -1.5em;
+    }
+}
 
 @media screen and (max-width: 920px) {
     body {
