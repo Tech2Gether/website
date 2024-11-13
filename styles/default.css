@@ -133,9 +133,10 @@ footer p {
     background-color: var(--yaml-yellow);
     color: black;
     border: 2px solid white;
-    padding: 1em;
+    padding: 0.5em;
     border-radius: 15px;
     text-decoration: none;
+    font-size: 1.5em;
     margin: 5px;
     transition: 0.5s;
     cursor: pointer;
