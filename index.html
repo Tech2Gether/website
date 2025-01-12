@@ -57,6 +57,13 @@
         // Set meeting title
         document.getElementById("meeting-title").innerHTML = meetingData.title;
 
+        // Fix meeting timer height
+        function fixTimerHeight() {
+            document.getElementById("meeting-timer").style.height = Math.floor(document.getElementById("meeting-timer").clientWidth / 4) + "px";
+        }
+        fixTimerHeight();
+        addEventListener("resize", (event) => { fixTimerHeight(); });
+        
         // Set meeting timer source
         document.getElementById("meeting-timer").src = "https://logwork.com/widget/countdown/?&uid=522240&loc=https://logwork.com/countdown-timer" +
             "&text=%C2%A0" + // Title (Non-breaking space)
@@ -79,7 +86,6 @@
             btn.innerHTML = button.text;
             document.getElementById("button-container").appendChild(btn);
         }
-        
 
     </script>
 </body>
