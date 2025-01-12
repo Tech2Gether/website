@@ -153,12 +153,11 @@ footer p {
     transform: scale(1.1);
 }
 
-.countdown-timer {
-    pointer-events: none;
-}
-
-.timer-title {
-    margin-bottom: -2em;
+#meeting-timer {
+    border: 0px;
+    pointer-events: none; 
+    user-select: none; 
+    width: 80%;
 }
 
 /* 

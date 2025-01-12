@@ -6,9 +6,6 @@
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="styles/default.css?v=4">
     <title>Tech2Gether</title>
-
-    <!-- Countdown timer script -->
-    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
 </head>
 
 <body>
@@ -19,15 +16,13 @@
         <h1 class="dare">Join Tech2Gether for Monthly Meetups</h1>
         <div class="card">
             <h2 class="dare">Next meeting</h2>
-            <p class="timer-title">January 22nd</p>
-                <!-- Timer -->
-                <a href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="America/Chicago" data-date="2025-01-22 18:00" data-background="#0e9ed5" data-digitscolor="#ffc90d" data-unitscolor="#ffffff">&nbsp;</a><p style="margin-top: -0.5em;">
-                    Tech2Gether Meeting - Details TBA
-                <br>
-                6:00 pm Pizza
-            </p>
-            <a href="https://forms.office.com/r/ZHex3hnWwG" target="_blank" class="btn">RSVP</a>
-            <a href="https://www.opensgf.org/" target="_blank" class="btn">Open SGF Website</a>
+
+            <!-- Edit meeting data in script below footer -->
+            <h2 id="meeting-title"></h2>
+            <iframe id="meeting-timer" scrolling="no" frameborder="0"></iframe>
+            <p id="description"></p>
+            <div id="button-container"></div>
+
         </div>
         <div class="card">
             <h2 class="dare">Join the Website Team!</h2>
@@ -43,6 +38,50 @@
     <footer class="dare">
         <p> &nbsp; Engaging&nbsp;Talks &nbsp; Networking&nbsp;Opportunities &nbsp; Free&nbsp;Pizza</p>
     </footer>
+
+    <script>
+
+        // Meeting data
+        const meetingData = {
+            title: 'January 22nd', // Date of the meeting in Month, Day format
+            date: '2025-01-22 18:00', // Date and time of the meeting in YYYY-MM-DD HH:MM format
+            description: 'Tech2Gether Meeting - Details TBA<br>6:00 pm Pizza',
+            buttons: [
+                {
+                    text: 'RSVP',
+                    link: 'https://forms.office.com/r/ZHex3hnWwG'
+                }
+            ]
+        };
+
+        // Set meeting title
+        document.getElementById("meeting-title").innerHTML = meetingData.title;
+
+        // Set meeting timer source
+        document.getElementById("meeting-timer").src = "https://logwork.com/widget/countdown/?&uid=522240&loc=https://logwork.com/countdown-timer" +
+            "&text=%C2%A0" + // Title (Non-breaking space)
+            "&date=" + meetingData.date + // Date and time of the meeting
+            "&timezone=America%2FChicago" + // Timezone (Central Time)
+            "&background=%230e9ed5" + // Digit background color (Analog Aquamarine)
+            "&digitscolor=%23ffc90d" + // Digit color (YAML Yellow)
+            "&unitscolor=%23ffffff"; // Unit color (White)
+
+        // Set meeting description
+        document.getElementById("description").innerHTML = meetingData.description;
+
+        // Add buttons
+        for (let i = 0; i < meetingData.buttons.length; i++) {
+            const button = meetingData.buttons[i];
+            const btn = document.createElement("a");
+            btn.href = button.link;
+            btn.target = "_blank";
+            btn.className = "btn";
+            btn.innerHTML = button.text;
+            document.getElementById("button-container").appendChild(btn);
+        }
+        
+
+    </script>
 </body>
 
 </html>
