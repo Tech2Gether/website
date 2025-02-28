@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Arial Nova";
+    src: url("../font/arial-nova.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Digital Dare";
+    src: url("../font/digital-dare.ttf") format("truetype");
+}
+
+:root {
+    --binary-blue: #00427D;
+    --analog-aquamarine: #0E9ED5;
+    --yaml-yellow: #FFC90D;
+}
+
+body {
+    font-family: "Arial Nova", sans-serif;
+}
+
+.dare {
+    font-family: "Digital Dare";
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--analog-aquamarine);
+    text-shadow: -2px 0 2px magenta;
+    letter-spacing: 6px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--yaml-yellow);
+    color: black;
+    border: 2px solid white;
+    padding: 0.5em;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--yaml-yellow);
+    border-color: var(--yaml-yellow);
+    transition: 0.5s;
+    transform: scale(1.1);
+}
