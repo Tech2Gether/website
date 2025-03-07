@@ -291,17 +291,25 @@ footer {
     .speaker-info p {
         font-size: 1rem;
     }
+
     header {
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 3fr;
     }
+
     nav ul {
-        /* flex-direction: column; */
         flex-wrap: wrap;
     }
+
     nav ul li {
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
+
+    nav .btn {
+        padding: 0.25rem;
+    }
+
     .timer {
         display: none;
     }
+
 }
