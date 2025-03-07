@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.png">
     <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <title>Tech2Gether</title>
 
 </head>
 
 <body>
+
+    <!-- Header -->
     <header>
+        <!-- Logo -->
         <div class="flex-container">
             <a href="index.html">
                 <img src="img/tech2gether_logo.png" alt="Tech2Gether Logo" id="logo">
             </a>
         </div>
+        <!-- Navbar -->
         <div class="margin-auto">
             <nav>
                 <ul>
@@ -30,11 +35,34 @@
         </div>
         <div class="margin-auto">Timer(?)</div>
     </header>
+
+    <!-- First Element -->
     <main class="text-center">
         <h1 class="dare">Heading 1</h1>
         <p>Paragraph!!!</p>
     </main>
 
+    <!-- Speaker Element -->
+    <section class="flex-container speaker-element margin-top-3 margin-bottom-3">
+        <button class="btn flex-container" id="speaker-left-button"><i class="bi bi-chevron-compact-left"></i></button>
+        <div class="flex-container-80 speaker box">
+            <img src="img/speaker_placeholder.png" alt="">
+                <div class="speaker-info flex-container">
+                    <div class="text-center">
+                        <h2 class="margin-top-3 margin-bottom-4">Linus Torvald</h2>
+                        <h3 class="margin-bottom-4">Talk Title</h3>
+                        <p class="margin-bottom-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores velit officia, cum corporis sequi, dolorem dicta obcaecati sit error quia illum deserunt, tenetur delectus ducimus dolorum quam ipsam incidunt earum! Fuga saepe temporibus modi totam, vitae debitis repellendus, voluptates reiciendis ratione dolorum error minima. Suscipit quod modi aspernatur assumenda dolor!</p>
+                    </div>
+                    <div class="flex-container margin-top-4 speaker-buttons">
+                        <button class="btn">Linus' Website</button>
+                        <button class="btn">Slides & Talk Content</button>
+                    </div>
+                </div>
+        </div>
+        <button class="btn flex-container" id="speaker-right-button"><i class="bi bi-chevron-compact-right"></i></button>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="text-center">
             <p>&copy; 2024 Tech2Gether</p>
