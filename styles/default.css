@@ -271,7 +271,11 @@ footer {
     justify-content: center;
 }
 
-@media (max-width: 760px){
+/* Media Queries - Formatting & Responsiveness */
+
+
+/* Small screen sizes, anything smaller than a tablet */
+@media (max-width: 576px){
     .speaker {
         flex-direction: column;
     }
@@ -312,4 +316,21 @@ footer {
         display: none;
     }
 
+}
+
+/* Medium screen sizes, usually a tablet or small laptop */
+@media (max-width: 760px){
+
+}
+
+/* Large screens, full sized normal monitors */
+
+@media (max-width:992px){
+
+}
+
+/* Extra large screens, 2k+ or ultrawide */
+
+@media (max-width:1200px){
+    
 }
