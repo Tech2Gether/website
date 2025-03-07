@@ -27,8 +27,10 @@ body {
     background-image: url("/img/background.png");
     min-height: 100vh;
     margin: 0;
-    display: grid; /* Making the body a grid may cause issues down the line */
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    /* display: grid; Making the body a grid may cause issues down the line */
+    /* grid-template-rows: auto 1fr auto; */
     /* overflow: hidden; With overflow hidden on the body, we don't get a scrollbar which causes formatting issues*/
 }
 
@@ -244,6 +246,7 @@ footer {
     flex-direction: column;
 }
 
+
 .speaker img,.speaker-info {
     width: 50%;
     height: 100%;
@@ -265,5 +268,40 @@ footer {
 }
 
 .speaker-buttons {
-    justify-content: space-evenly;
+    justify-content: center;
+}
+
+@media (max-width: 760px){
+    .speaker {
+        flex-direction: column;
+    }
+    .speaker img,.speaker-info {
+        width: 100%;
+        height: 50%;
+    }
+    .speaker-info h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    
+    .speaker-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .speaker-info p {
+        font-size: 1rem;
+    }
+    header {
+        grid-template-columns: 1fr 2fr;
+    }
+    nav ul {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        font-size: 0.85rem;
+    }
+    .timer {
+        display: none;
+    }
 }
