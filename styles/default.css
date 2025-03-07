@@ -301,15 +301,29 @@ footer {
     }
 
     header {
-        grid-template-columns: 0.5fr 3fr;
+        grid-template-columns: 1fr 2fr;
     }
 
     nav ul {
         flex-wrap: wrap;
+        margin-left: 15%;
     }
 
     nav ul li {
         font-size: 1rem;
+    }
+
+    /* This is incredibly tempermental, change at your own risk */
+
+    .logo {
+        width: 80%;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 2.5%;
+    }
+
+    #logo {
+        width: 160%;
     }
 
     nav .btn {
