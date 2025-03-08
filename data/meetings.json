@@ -1,0 +1,23 @@
+{
+    "meetings": [
+        {
+            "title": "Sharp Security from All Angles",
+            "thumbnail": "img/thumbnails/3_26_2025_thumbnail.jpg",
+            "date": "Mar 26 2025 18:00:00 GMT-0600",
+            "speaker": "Tiffany Ford",
+            "description": "This workshop is a scaled-down version of the Secure From Scratch presentation I attended at Defcon 32 in August 2024. We will look at a .NET Core 8 / Angular 17 application and discuss security vulnerabilities, learn how attackers think about exploitation and how you can think securely about your applications. <br><br> Attendees who want to work along with me during the workshop will need to get the application running on their laptop before the session. Instructions available in the GitHub for the test application.",
+            "location": "PMC-232",
+            "schedule": "6:00 PM - Pizza and Networking <br> 6:30 PM - Workshop Begins",
+            "buttons": [
+                {
+                    "text": "RSVP",
+                    "link": "https://forms.office.com/r/cVXTmy5CEj"
+                },
+                {
+                    "text": "GitHub Content",
+                    "link": "https://github.com/rhysma/Secure_Angular/"
+                }
+            ]
+        }
+    ]
+}
