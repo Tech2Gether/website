@@ -273,6 +273,10 @@ footer {
     justify-content: center;
 }
 
+.mobile-only {
+    display: none;
+}
+
 /* Media Queries - Formatting & Responsiveness */
 
 
@@ -282,7 +286,7 @@ footer {
         flex-direction: column;
         width: 90%;
     }
-    .speaker img,.speaker-info {
+    .speaker img, .speaker-info {
         width: 100%;
         height: 50%;
     }
@@ -344,7 +348,7 @@ footer {
         display: none;
     }
 
-    .mobile-only-elements {
+    .mobile-only {
         display: flex;
         flex-direction: row;
         width: 100%;
