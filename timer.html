@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="styles/butestrap.css">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Tech2Gether</title>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Logo -->
+        <a class="logo" href="index.html">
+            <img src="img/tech2gether_logo.png" alt="Tech2Gether Logo" id="logo">
+        </a>
+        <!-- Navbar -->
+        <div class="margin-auto">
+            <nav>
+                <ul>
+                    <li><a class="btn" href="index.html">Home</a></li>
+                    <li><a class="btn" href="about.html">About</a></li>
+                    <li><a class="btn" href="sponsors.html">Sponsors</a></li>
+                    <li><a class="btn" href="docs.html">Docs</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="margin-auto timer">
+            <p class="timer-title">Next meeting</p>
+            <div class="timer-clock">
+                <p class="timer-days">00</p>
+                <p class="timer-hours">00</p>
+                <p class="timer-minutes">00</p>
+                <p class="timer-seconds">00</p>
+            </div>
+        </div>
+    </header>
+
+    <main></main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="text-center">
+            <p>&copy; 2024 Tech2Gether</p>
+            <p class="dare">Engaging Talks | Networking Opportunities | Free Pizza</p>
+        </div>
+    </footer>
+
+
+    <!-- Meeting Script -->
+    <script>
+        // Get meeting data
+        (async () => {
+            const response = await fetch('./data/meetings.json');
+            const data = await response.json();
+
+            const meeting = data.meetings[0];
+            
+            // Set meeting date
+            const meetingDate = new Date(meeting.date);
+
+            // Set countdown
+            const countdown = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = meetingDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.querySelector('.timer-days').textContent = days.toString().padStart(2, '0');
+                document.querySelector('.timer-hours').textContent = hours.toString().padStart(2, '0');
+                document.querySelector('.timer-minutes').textContent = minutes.toString().padStart(2, '0');
+                document.querySelector('.timer-seconds').textContent = seconds.toString().padStart(2, '0');
+
+                if (distance < 0) {
+                    clearInterval(countdown);
+                    document.querySelector('.timer-clock').innerHTML = '<p class="timer-expired">Meeting Expired</p>';
+                }
+            }, 1000);
+        })();
+    </script>
+</body>
+
+</html>

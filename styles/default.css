@@ -36,6 +36,7 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    overflow: hidden;
 }
 
 header nav {
@@ -116,27 +117,30 @@ footer {
 }
 
 .box {
+    color: white;
     border-radius: 15px;
     border: 2px solid aquamarine;
     max-height: 80%;
+    background-color: var(--binary-blue);
+    width: 90%;
+    height: 100%;
 }
+
+.center-box {
+    align-items: center;
+    justify-content: center;
+}
+
+/*  */
 
 
 /* Speaker Element */
 
-#meeting {
-    align-items: center;
-    height: 60%;
-    justify-content: center;
-}
-
 .speaker {
-    background-color: var(--binary-blue);
-    width: 70%;
-    height: 100%;
     margin-left: 0;
     margin-right: 0;
     flex-direction: column;
+    
 }  
 
 .speaker-info {
@@ -147,7 +151,6 @@ footer {
     width: 50%;
     height: 100%;
     border-radius: 15px;
-    color: white;
 }
 
 .speaker img {
@@ -158,19 +161,6 @@ footer {
 
 .speaker-info .text-center {
     padding: 2px;
-}
-
-.speaker-info h2 {
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.speaker-info h3 {
-    font-size: 2rem;
-}
-
-.speaker-info p {
-    font-size: 1.5rem;
 }
 
 .speaker-buttons {
@@ -197,19 +187,6 @@ footer {
     max-height: 100%;
 }
 
-/* Carousel Stuff for later */
-
-.speaker-element #speaker-left-button,.speaker-element #speaker-right-button {
-    display: flex;
-    height: 7.5%;
-    width: 1.5%;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    margin-left: 1%;
-    margin-right: 1%;
-}
-
 #meeting-description-medium {
     display: none;
 }
@@ -217,6 +194,43 @@ footer {
 #meeting-description-large {
     display: block;
 }
+
+/* Timer */
+
+.timer {
+    text-align: center;
+}
+
+.timer-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.timer-clock > * {
+    padding: 0.25rem 0.1rem;
+    margin: 0 0.2rem;
+    background-color: var(--analog-aquamarine);
+    color: var(--yaml-yellow);
+    border-radius: 25%;
+}
+
+/* Sponsors */
+
+.sponsors {
+    width: 80%;
+}
+
+/* About Us */
+
+.person img {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    border: 2px dashed var(--yaml-yellow);
+}
+
 /* Media Queries - Formatting & Responsiveness */
 
 /* "Large" screens, iPad etc */
@@ -255,19 +269,6 @@ footer {
 
 /* Medium screen sizes, usually a tablet or small laptop */
 @media (max-width: 760px){
-
-    .speaker-info h2 {
-        font-size: 2rem;
-        font-weight: bold;
-    }
-    
-    .speaker-info h3 {
-        font-size: 1.5rem;
-    }
-    
-    .speaker-info p {
-        font-size: 1rem;
-    }
     
     #meeting-image {
         max-height: 100%;
@@ -287,7 +288,7 @@ footer {
         font-size: 1rem;
     }
 
-    .test2 {
+    .speaker-title-name {
         flex-direction: column;
     }
     

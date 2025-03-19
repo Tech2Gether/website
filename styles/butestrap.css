@@ -1,8 +1,20 @@
 @charset "UTF-8";
 
+/* Defaults */
+
 * {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { font-size: 2rem; }
+
+p { font-size: 1.5rem; }
+
+@media (max-width: 756px) {
+    h1, h2, h3, h4, h5, h6 { font-size: 1.5rem; }
+    
+    p { font-size: 1rem; }
 }
 
 /* Margins */
@@ -122,7 +134,8 @@
 
 .text-underline { text-decoration: underline; }
 .text-italic { font-style: italic; }
-.text-bold { font-weight: bold; }
+.font-weight-bold { font-weight: bold; }
+.font-weight-regular { font-weight: normal; }
 .text-none { text-decoration: none; }
 
 /* Containers */
@@ -134,4 +147,26 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Flex Controls */
+
+.flex-column { flex-direction: column; }
+
+/* Font Sizes */
+
+.font-small { font-size: 0.5rem; }
+.font-medium { font-size: 1.5rem; }
+.font-large { font-size: 2rem; }
+.font-extra-large { font-size: 3rem; }
+.font-huge { font-size: 5rem; }
+
+@media (max-width: 756px) {
+
+    /* Font Sizes */
+    .font-small { font-size: 0.25rem; }
+    .font-medium { font-size: 1rem; }
+    .font-large { font-size: 1.5rem; }
+    .font-extra-large { font-size: 2rem; }
+    .font-huge { font-size: 3rem; }
 }
