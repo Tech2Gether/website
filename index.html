@@ -44,7 +44,8 @@
                     <div class="speaker-info flex-container">
                         <div class="text-center">
                             <h2 id="meeting-title" class="margin-top-3 margin-bottom-4 dare font-extra-large"></h2>
-                            <h3 id="meeting-speaker" class="margin-bottom-4 dare"></h3>
+                            <p id="meeting-speaker" class="margin-bottom-4 dare font-large"></p>
+                            <p id="meeting-date" class="dare font-large"></p>
                             <p id="meeting-description-large" class="margin-bottom-3 padding-2"></p>
                         </div>
                     </div>
@@ -52,6 +53,7 @@
                 </div>
                 <div class="speaker-info speaker-desc flex-container margin-auto">
                     <p id="meeting-description-medium" class="margin-bottom-3 padding-2"></p>
+                    
                     <p id="meeting-location" class="dare"></p>
                     <p id="meeting-schedule" class="dare"></p>
                     <div id="meeting-buttons" class="flex-container margin-top-4 speaker-buttons"></div>
@@ -63,61 +65,13 @@
     <footer>
         <div class="text-center">
             <p>&copy; 2024 Tech2Gether</p>
-            <p class="dare">Engaging Talks | Networking Opportunities | Free Pizza</p>
+            <p class="dare">Engaging Talks Networking Free Pizza</p>
         </div>
     </footer>
 
 
     <!-- Meeting Script -->
-    <script>
-        // Get meeting data
-        (async () => {
-            const response = await fetch('./data/meetings.json');
-            const data = await response.json();
-
-            const meeting = data.meetings[0];
-            
-            // Set meeting data
-            document.getElementById('meeting-title').textContent = meeting.title;
-            document.getElementById('meeting-speaker').textContent = meeting.speaker;
-            document.getElementById('meeting-description-large').innerHTML = meeting.description;
-            document.getElementById('meeting-description-medium').innerHTML = meeting.description;
-            document.getElementById('meeting-image').src = meeting.thumbnail;
-            document.getElementById('meeting-location').textContent = `Location: ${meeting.location}`;
-            document.getElementById('meeting-schedule').innerHTML = meeting.schedule;
-
-            // Set meeting buttons
-            const buttons = document.getElementById('meeting-buttons');
-            meeting.buttons.forEach(button => {
-                const a = document.createElement('a');
-                a.textContent = button.text;
-                a.href = button.link;
-                a.className = 'btn';
-                a.target = '_blank';
-                buttons.appendChild(a);
-            });
-
-            // Set countdown
-            const countdown = setInterval(() => {
-                const distance = new Date(meeting.date) - new Date().getTime();
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.querySelector('.timer-days').textContent = days.toString().padStart(2, '0');
-                document.querySelector('.timer-hours').textContent = hours.toString().padStart(2, '0');
-                document.querySelector('.timer-minutes').textContent = minutes.toString().padStart(2, '0');
-                document.querySelector('.timer-seconds').textContent = seconds.toString().padStart(2, '0');
-
-                if (distance < 0) {
-                    clearInterval(countdown);
-                    document.querySelector('.timer-clock').innerHTML = '<p class="timer-expired">Meeting Expired</p>';
-                }
-            }, 1000);
-        })();
-    </script>
+    <script src="scripts/timer.js"></script>
 </body>
 
 </html>

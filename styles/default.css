@@ -32,11 +32,10 @@ body {
 header {
     background-color: var(--binary-blue);
     color: white;
-    /* height: 200px; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 header nav {
@@ -216,16 +215,11 @@ footer {
     border-radius: 25%;
 }
 
-/* Sponsors */
-
-.sponsors {
-    width: 80%;
-}
-
 /* About Us */
 
 .person > img {
     width: 256px;
+    margin-top: 1rem;
     border-radius: 50%;
     border: 2px dashed var(--yaml-yellow);
 }
