@@ -21,7 +21,7 @@
 
     // If there are no future meetings, set the last meeting as the current meeting
     if (!meeting) {
-        meeting = parsedResponse.meetings[0];
+        meeting = parsedResponse.meetings[1];
     }
 
     // Check if the meeting title element exists

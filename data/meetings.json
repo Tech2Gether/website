@@ -18,6 +18,21 @@
                     "link": "https://github.com/rhysma/Secure_Angular/"
                 }
             ]
+        },
+        {
+            "title": "Catching up with Competitions",
+            "thumbnail": "img/thumbnails/placeholder.png",
+            "date": "Apr 16 2025 18:00:00 GMT-0500",
+            "speaker": "Various Student Presenters",
+            "description": "OTC Students will be presenting on their experience at competitions such as CCDC & CCSC. There will be updates about any students who competed at SkillsUSA and are going on to nationals. There will also be a short pitch from Officer Candidates. More information coming soon.",
+            "location": "PMC 232",
+            "schedule": "6:00 PM - Pizza and Networking <br> 6:30 PM - Meeting Begins",
+            "buttons": [
+                {
+                    "text": "RSVP",
+                    "link": "https://forms.office.com/Pages/ResponsePage.aspx?id=drq33vxyB0yDPxYotekhaNhghODwk3NEh9FML_kcXP9UQTBXNDZSQVZRQk9LU1VWVTBLUkdZVTZYUS4u"
+                }
+            ]
         }
     ]
 }
