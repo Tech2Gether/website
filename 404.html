@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/default.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <title>Sponsers</title>
+    <title>Not Found</title>
 
 </head>
 
@@ -37,27 +37,13 @@
         </div>
     </header>
     <main class="text-center">
+        <h1 class="dare font-huge">Error 404</h1>
         <section class="flex-container center-box margin-top-3 margin-bottom-3">
             <div class="flex-container-80 box center-box flex-column">
-                <h2 class="margin-top-3 margin-bottom-4 dare font-extra-large">Our Sponsors</h2>
-                <p>No sponsors yet</p>
-
-                <h3 class="font-extra-large margin-top-4 margin-bottom-4 dare">Sponsor Tiers</h3>
-                <h4 class="margin-top-3 margin-bottom-4 dare">Bronze - $100</h4>
-                <p class="margin-bottom-4 text-weight-bold">
-                    Your logo will appear on our website, slideshow, and any printed materials, plus a special shoutout at every meeting!
-                </p>
-                <h5 class="margin-top-3 margin-bottom-4 dare">Silver - $250</h5>
-                <p class="margin-bottom-4 text-weight-bold">
-                    You'll receive everything in the bronze tier as well as opportunities to speak with students at meetings and job postings on our website.
-                </p>
-
-                <h6 class="margin-top-3 margin-bottom-4 dare">Future Possibilities</h6>
-                <p class="margin-bottom-4 text-weight-bold">
-                    We hope to have a third tier available next year. Members of the silver tier this year will be presented the opportunity to the join gold tier next year for the same price as a special thank you for your early support!
-                </p>
-                <a href="https://forms.office.com/r/mn7njtfN2Z" class="btn" target="_blank">Submit Inquiry</a>
+                <p id="404text" class="font-large margin-top-1">Page not found</p>
+                <a href="index.html" class="btn">Return to Home</a>
             </div>
+            
         </section>
     </main>
     <footer>
@@ -68,6 +54,16 @@
     </footer>
 
     <script src="scripts/timer.js"></script>
+
+    <script>
+        const text404 = [
+            "These are not the droids you are looking for.",
+            "It's a trap! This whole thing is a setup!",
+            "Are you sure about that?"
+        ];
+
+        document.getElementById("404text").innerText = text404[Math.floor(Math.random() * text404.length)];
+    </script>
 </body>
 
 </html>
