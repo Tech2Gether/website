@@ -33,6 +33,16 @@
                     "link": "https://forms.office.com/Pages/ResponsePage.aspx?id=drq33vxyB0yDPxYotekhaNhghODwk3NEh9FML_kcXP9UQTBXNDZSQVZRQk9LU1VWVTBLUkdZVTZYUS4u"
                 }
             ]
+        },
+        {
+            "title": "End of Semester Party",
+            "thumbnail": "img/thumbnails/placeholder.png",
+            "date": "May 6 2025 18:00:00 GMT-0500",
+            "speaker": "Potluck + Games",
+            "description": "Join us for our end of semester party! Bring a dish to share and your favorite board game. Please note that pizza will not be provided, and no registration is required. <br><br>Additionally, we will be announcing the winners of the Officer elections. Don't forget to vote!<br><br>Note: Due to a class being held in PMC 232, we will be meeting in PMC 161.",
+            "location": "PMC 161",
+            "schedule": "6:00 PM - Potluck + Games",
+            "buttons": []
         }
     ]
 }
