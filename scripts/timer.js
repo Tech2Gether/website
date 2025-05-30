@@ -11,17 +11,19 @@
 
     // Iterate through the meeting data
     for (let i = 0; i < parsedResponse.meetings.length; i++) {
+        const meetingDate = new Date(parsedResponse.meetings[i].date);
+        const meetingEndWindow = new Date(meetingDate.getTime() + 2 * 60 * 60 * 1000); // 2 hours after meeting start
 
-        // Check if the meeting date is in the future
-        if (new Date(parsedResponse.meetings[i].date) > new Date()) {
+        // Check if the current time is before the end of the 2-hour window
+        if (new Date() < meetingEndWindow) {
             meeting = parsedResponse.meetings[i];
             break;
         }
     }
 
-    // If there are no future meetings, set the last meeting as the current meeting
+    // If there are no future meetings, set to the placeholder meeting
     if (!meeting) {
-        meeting = parsedResponse.meetings[1];
+        meeting = parsedResponse.meetings[0];
     }
 
     // Check if the meeting title element exists
