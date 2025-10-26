@@ -1,6 +1,8 @@
-# Tech2Gether Website
+# Tech2Gether Website [OUTDATED]
 
-This is the repository for the [Tech2Gether Website.](https://www.tech-club.otccompsci.com/)
+~~This is the repository for the [Tech2Gether Website.](https://www.tech-club.otccompsci.com/)~~
+
+This repository is no longer maintained. The current repository can be found at [2-Tech-2-Gether](https://github.com/ItsMeWillyV/2-Tech-2-Gether)
 
 # Style Guide
 
